@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+body .left, body .right {
+    flex-grow: 1;
+    flex-shrink: 5;
+}
+
+body .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+
+    flex-grow: 5;
+    flex-shrink: 1;
+}
+
+.center-header {
+    align-self: stretch;
+    background-color: rgb(206, 154, 9);
+    border: 8px solid black;
+    border-radius: 10px;
+    margin-bottom: 50px;
+
+    text-align: center;
+}
+
+.center-startButton button {
+    background-color: black;
+    color: white;
+    font-weight: 1000;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.center-startButton button:active {
+    background-color: grey;
+    color: white;
+    font-weight: 1000;
+    font-size: 16px;
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+
+.center-gridContainer {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+
+    margin-top: 20px;
+    padding: 0px;
+    border: 5px solid black;
+}
