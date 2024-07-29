@@ -30,7 +30,7 @@ function createGrid(gridDimension) {
     
             gridBox.style.flexShrink = 1;
             gridBox.style.flexGrow = 1;
-            gridBox.style.border = "1px solid blue";
+            gridBox.style.border = "1px solid rgb(235, 235, 235)";
             
             gridBox.addEventListener("mouseover", () => {
                 let num1 = Math.floor(Math.random()*256);
