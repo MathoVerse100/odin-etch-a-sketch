@@ -31,13 +31,19 @@ function createGrid(gridDimension) {
             gridBox.style.flexShrink = 1;
             gridBox.style.flexGrow = 1;
             gridBox.style.border = "1px solid rgb(235, 235, 235)";
-            
+            gridBox.style.opacity = `0`;
+
             gridBox.addEventListener("mouseover", () => {
                 let num1 = Math.floor(Math.random()*256);
                 let num2 = Math.floor(Math.random()*256);
                 let num3 = Math.floor(Math.random()*256);
+                gridBoxOpacity = parseFloat(gridBox.style.opacity);
 
                 gridBox.style.backgroundColor = `rgb(${num1}, ${num2}, ${num3})`;
+
+                if (gridBoxOpacity < 1) {
+                    gridBox.style.opacity = `${gridBoxOpacity + 0.1}`;
+                };
             });
 
             centerGridContainerLevel.appendChild(gridBox);
